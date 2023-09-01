@@ -40,7 +40,7 @@ const CONNECTION_URL = process.env.CONNECTION_URL;
 
 //connection with mongoDB with mongoose
 mongoose
-  .connect('${CONNECTION_URL}', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
     app.listen(PORT, () => {
       console.log("SERVER RUNNING ON PORT", PORT);
