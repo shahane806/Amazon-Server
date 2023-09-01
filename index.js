@@ -8,7 +8,7 @@ import { login, signup, forgetPassword } from "./Controllers/auth.js";
 import { purchaseItems } from "./Controllers/purchaseItems.js";
 import { getUpdatedProfile, setprofile } from "./Controllers/profile.js";
 import verifyToken from "./middleware/verify.js";
-import { UpdateRecentOrders,FetchRecentOrders } from "./Controllers/recentOrders.js";
+import { updateRecentOrders,fetchRecentOrders } from "./Controllers/recentOrders.js";
 const app = express();
 dotenv.config();
 
