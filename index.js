@@ -30,8 +30,8 @@ app.post("/auth/forgetPassword", forgetPassword);
 app.post("/checkout/payment",verifyToken, purchaseItems);
 app.post("/user/profile",verifyToken,setprofile);
 app.post("/user/getUpdatedProfile",verifyToken,getUpdatedProfile);
-app.post("/Orders/UpdateRecentOrders",verifyToken,UpdateRecentOrders);
-app.post("/Orders/FetchRecentOrders",verifyToken,FetchRecentOrders);
+app.post("/Orders/UpdateRecentOrders",verifyToken,updateRecentOrders);
+app.post("/Orders/FetchRecentOrders",verifyToken,fetchRecentOrders);
 
 
 const PORT = process.env.PORT || 5000;
