@@ -10,7 +10,7 @@ import { getUpdatedProfile, setprofile } from "./Controllers/profile.js";
 import verifyToken from "./middleware/verify.js";
 import { updateRecentOrders,fetchRecentOrders } from "./Controllers/recentOrders.js";
 const app = express();
-dotenv.config();
+const env = dotenv.config();
 
 
 //apply middleware
@@ -40,7 +40,7 @@ const CONNECTION_URL = process.env.CONNECTION_URL;
 
 //connection with mongoDB with mongoose
 mongoose
-  .connect("mongodb+srv://shahane806:rwdPFtU3810kmrKE@amazonclone.fdoyx1o.mongodb.net/?retryWrites=true&w=majority&appName=amazonClone", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
     app.listen(PORT, () => {
       console.log("SERVER RUNNING ON PORT", PORT);
