@@ -1,5 +1,5 @@
 import Stripe from "stripe"
-const stripe = (Stripe)('sk_test_51MhATBSDpu6MsaKXdcCEi8vjJbuwbEitFK3mc0SgASQtUOuUv9xakAVZNZMw10aodG19QFP7TVwPxpTliXI9i6Ub00RnYevDHW');
+const stripe = (Stripe)(process.env.STRIPE_SECRET_KEY);
 const calculateOrderAmount = (subtotal,inr = 1) => {
     subtotal= (subtotal*inr)*100;
     return subtotal;
